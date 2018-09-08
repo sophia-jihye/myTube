@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/sub.css" rel="stylesheet" type="text/css" />
+    <title>myTube</title>
+</head>
+<body>
+<div class="header">
+    <h1 class="head_logo">
+        <a href="home.html" title="myTube">
+            <img onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="logoImg" src="image/myTube.png" width="150" height="75" alt="myTube">
+        </a>
+    </h1>
+    <!-- search -->
+    <div class="search">
+        <form id="searchForm">
+            <fieldset>
+                <div class="input_wrap">
+                    <input class="searchInput" value="" type="text" title="검색어를 입력하세요" >
+                    <a href="" tabindex="3" title="검색" class="btn_search">검색</a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <!-- //search -->
+    <!--버튼 영역-->
+    <div class="back fillerText">
+        <!--로그인 modal 영역 시작-->
+        <div class="modalContent" >
+            <fieldset class="login_form" style="text-align: center">
+                <legend>로그인</legend>
+                <div>
+						<span>
+							<input type="text" title="아이디" tabindex="7" placeholder="아이디를 입력해주세요" maxlength="41" value="">
+						</span>
+                </div>
+                <div>
+						<span>
+							<input type="password" title="비밀번호" itabindex="8" placeholder="비밀번호를 입력해주세요" maxlength="16">
+						</span>
+                </div>
+                <button class="button button4">로그인</button>
+            </fieldset>
+        </div>
+        <!--로그인 modal 영역 끝-->
+        <div class="button_base b03_skewed_slide_in" id="loginBtnDiv" onclick="hideLoginBtnDiv();" >
+            <div>로그인</div>
+            <div></div>
+            <div><a href="" class="modalBtn">로그인</a></div>
+        </div>
+    </div>
+    <div class="back">
+        <div class="button_base b03_skewed_slide_in">
+            <div>회원가입</div>
+            <div></div>
+            <div>회원가입</div>
+        </div>
+    </div>
+</div>
+
+<div class="nav">
+    <div class="menu_top">
+        <h2>최근 검색어</h2>
+        <div>
+            <a href="" class="menu_cnt">Pentatonix</a>
+            <a href="" class="menu_cnt">펜타토닉스</a>
+            <a href="" class="menu_cnt">pentatonix cover</a>
+            <a href="" class="menu_cnt">problem</a>
+            <a href="" class="menu_cnt">daft punk</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu_ch">
+        <h2>최근에 본 동영상</h2>
+        <div>
+            <a href="" class="menu_cnt" >Problem</a>
+            <a href="" class="menu_cnt">Santa Tell Me</a>
+            <a href="" class="menu_cnt" >Love Yourself</a>
+            <a href="" class="menu_cnt" >Closer</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu_ch">
+        <h2>좋아요 누른 동영상</h2>
+        <div>
+            <a href="" class="menu_cnt" >Rookie</a>
+            <a href="" class="menu_cnt" >Oh boy</a>
+            <a href="" class="menu_cnt" >러시안 룰렛</a>
+            <a href="" class="menu_cnt" >Dumb Dumb</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="menu_ch">
+        <h2>재생 목록 </h2>
+        <div>
+            <ul>
+                <li>
+                    <a href="" class="menu_cnt" >Uptown funk</a>
+                </li>
+                <li>
+                    <a href="" class="menu_cnt" >Last Christmas</a>
+                </li>
+                <li>
+                    <a href="" class="menu_cnt" >Paris</a>
+                </li>
+                <li>
+                    <a href="" class="menu_cnt" >혼자라도</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <div id="smrBrandArea" class="menu_smr">
+        <h2 class="menu_tit">외부 링크 연결</h2>
+        <div class="etc">
+            <ul class="menu">
+                <li>
+                    <a href="http://www.melon.com/index.htm" class="menu_cnt" target="_blank"><em class="ic_vingo"><img onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="link001" src="image/melon.png" width="67" height="20" alt="Melon"></em>Melon</a>
+                </li>
+                <li>
+                    <a href="http://www.pooq.co.kr/" class="menu_cnt" target="_blank"><em class="ic_vingo"><img onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="link002" src="image/pooq.png" width="67" height="20" alt="pooqTv"></em>pooq</a>
+                </li>
+                <li>
+                    <a href="http://www.tving.com/main.do" class="menu_cnt" target="_blank"><em class="ic_vingo"><img src="http://img.tvcast.naver.net/pc/img/exclusive/ic_vingo4.png" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="link003" width="67" height="10" alt="TVING TV"></em>Tving</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="container">
+    <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/OmjN_b07syo" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="replyDiv">
+        <div class="writeReplyDiv" >
+            <label for="comment">Comment:</label>
+            <textarea id="comment"></textarea>
+            <button class="button1">댓글등록</button>
+        </div>
+        <div>
+            <div class="eachReplyDiv">
+                <span class="idSpan">sdfwer</span>
+                <span id="replySpan01">하하하 이 노래 너무 좋아요</span>
+            </div>
+            <div class="eachReplyDiv">
+                <span class="idSpan">aaaa123</span>
+                <span id="replySpan02">BJ꽃님이 부르고서 유명해진 노래 이노래 아님??</span>
+            </div>
+            <div class="eachReplyDiv">
+                <span class="idSpan">HAHAHA</span>
+                <span id="replySpan03">This song has really beautiful lyrics XD</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <span class="info">본 콘텐츠의 저작권은 저작권자에 있으며, 이를 무단으로 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</span>
+        <address>
+            <em>Copyright ©</em>
+            <a href="" target="_blank" >myTube Corp.</a>
+            <span>All Rights Reserved.</span>
+        </address>
+    </div>
+
+</div>
+</body>
+</html>

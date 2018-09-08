@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="title" content="myTube">
+    <meta property="description" content="음악과 영상을 함께 보기에 가장 좋은 방법, myTube">
+    <link href="css/home.css" rel="stylesheet" type="text/css" />
+    <title>myTube</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="head_logo">
+            <a href="home.html" title="myTube">
+                <img onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="logoImg" src="image/myTube.png" width="150" height="75" alt="myTube">
+            </a>
+        </h1>
+        <!-- search -->
+        <div class="search">
+            <form id="searchForm">
+                <fieldset>
+                    <div class="input_wrap">
+                            <input class="searchInput" value="" type="text" title="검색어를 입력하세요" >
+                        <a href="" tabindex="3" title="검색" class="btn_search menu_cnt">검색</a>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <!-- //search -->
+        <!--버튼 영역-->
+        <div class="back fillerText">
+            <div class="modalContent" >
+                <fieldset class="login_form" style="text-align: center">
+                    <legend>로그인</legend>
+                    <div>
+						<span>
+							<input type="text" title="아이디" tabindex="7" placeholder="아이디를 입력해주세요" maxlength="41" value="">
+						</span>
+                    </div>
+                    <div>
+						<span>
+							<input type="password" title="비밀번호" itabindex="8" placeholder="비밀번호를 입력해주세요" maxlength="16">
+						</span>
+                    </div>
+                    <button class="button button4">로그인</button>
+                </fieldset>
+            </div>
+            <!--로그인 modal 영역 끝-->
+            <div class="button_base b03_skewed_slide_in" id="loginBtnDiv" onclick="hideLoginBtnDiv();" >
+                <div>로그인</div>
+                <div></div>
+                <div><a href="" class="modalBtn">로그인</a></div>
+            </div>
+        </div>
+        <div class="back">
+            <div class="button_base b03_skewed_slide_in">
+                <div>회원가입</div>
+                <div></div>
+                <div>회원가입</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="menu_top">
+            <h2>최근 검색어</h2>
+            <ul>
+                <li><a href="" class="menu_cnt">Pentatonix</a></li>
+                <li><a href="" class="menu_cnt">펜타토닉스</a></li>
+                <li><a href="" class="menu_cnt">pentatonix cover</a></li>
+                <li><a href="" class="menu_cnt">problem</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="menu_ch">
+            <h2>최근에 본 동영상</h2>
+            <ul>
+                <li><a href="" class="menu_cnt" >Problem</a></li>
+                <li><a href="" class="menu_cnt">Santa Tell Me</a></li>
+                <li><a href="" class="menu_cnt" >Love Yourself</a></li>
+                <li><a href="" class="menu_cnt" >Closer</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="menu_ch">
+            <h2>좋아요 누른 동영상</h2>
+            <ul>
+                <li><a href="" class="menu_cnt" >Rookie</a></li>
+                <li><a href="" class="menu_cnt" >Oh boy</a></li>
+                <li><a href="" class="menu_cnt" >러시안 룰렛</a></li>
+                <li><a href="" class="menu_cnt" >Dumb Dumb</a></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <div class="menu_ch">
+            <h2>재생 목록 </h2>
+            <div>
+                <ul>
+                    <li><a href="" class="menu_cnt" >Uptown funk</a></li>
+                    <li><a href="" class="menu_cnt" >Last Christmas</a></li>
+                    <li><a href="" class="menu_cnt" >Paris</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="smrBrandArea" class="menu_smr">
+            <h2 class="menu_tit">외부 링크 연결</h2>
+            <div class="etc">
+                <ul class="menu">
+                    <li>
+                        <a href="http://www.melon.com/index.htm" class="menu_cnt" target="_blank"><em class="ic_vingo"><img onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="link001" src="image/melon.png" width="67" height="20" alt="Melon"></em>Melon</a>
+                    </li>
+                    <li>
+                        <a href="http://www.pooq.co.kr/" class="menu_cnt" target="_blank"><em class="ic_vingo"><img onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="link002" src="image/pooq.png" width="67" height="20" alt="pooqTv"></em>pooq</a>
+                    </li>
+                    <li>
+                        <a href="http://www.tving.com/main.do" class="menu_cnt" target="_blank"><em class="ic_vingo"><img src="http://img.tvcast.naver.net/pc/img/exclusive/ic_vingo4.png" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="link003" width="67" height="10" alt="TVING TV"></em>Tving</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div>
+            <h3>이전에 시청한 동영상</h3>
+            <div >
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/J0h8-OTC38I" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="item_container" >
+            <h3>최근에 본 동영상</h3>
+            <div class="dotClass">
+                <span class="dot1" onclick="currentSlide1(1)"></span>
+                <span class="dot1" onclick="currentSlide1(2)"></span>
+                <span class="dot1" onclick="currentSlide1(3)"></span>
+            </div>
+
+            <div class="content_lists">
+                <a class="prev" onclick="plusSlides1(-1)" >
+                    <img src="image/left.png" width="100" height="100" alt="prev" onmouseover="hoverLeftImg(this)" onmouseout="normalLeftImg(this)">
+                </a>
+
+                <div class="numbertext">1 / 3</div>
+                <div class="mySlides1 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic111span"></span>
+                        <span class="classForHidden" id="pic111spanHidden">레드벨벳 - 루키</span>
+                        <a href="sub1.html" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic111"><img width="196" src="https://i.ytimg.com/vi/J0h8-OTC38I/hqdefault.jpg?custom=true&amp;w=336&amp;h=188&amp;stc=true&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=WkyQ1zBkQXP7pXoDRCqQkZeQDNA" alt="" data-ytimg="1" height="110"></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic112span"></span>
+                        <span class="classForHidden" id="pic112spanHidden">신현희와 김루트 - 오빠야</span>
+                        <a href="sub2.html" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic112"><img width="196" src="https://i.ytimg.com/vi/OmjN_b07syo/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=6TipEz3jc2SCIwd_SM3mACLQYAg" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic113span"></span>
+                        <span class="classForHidden" id="pic113spanHidden">Ariana Grande - Problem</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic113"><img width="196" src="https://i.ytimg.com/vi/iS1g8G_njx8/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=lOxtPI_WFysb-CjFchixOsoM8_Y" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic114span"></span>
+                        <span class="classForHidden" id="pic114spanHidden">레드벨벳 - Oh Boy</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic114"><img width="196" src="https://i.ytimg.com/vi/ZL630JUpUj4/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=MreB0KIiyhVJpLI2KCZke3Zr0VU" alt="" data-ytimg="1" height="110" ></a>
+                     </div>
+                     <div class="divForInline">
+                        <span class="classForInfo" id="pic115span"></span>
+                        <span class="classForHidden" id="pic115spanHidden">샤이니 - Hello</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic115"><img width="196" src="https://i.ytimg.com/vi/skZxb5sBoiU/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=n0a-5__HyRDA8nXlMc2sp-0Y8Ec" alt="" data-ytimg="1" height="110" ></a>
+                     </div>
+                </div>
+
+                <div class="numbertext">2 / 3</div>
+                <div class="mySlides1 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic121span"></span>
+                        <span class="classForHidden" id="pic121spanHidden">라라랜드 - Lovely Night</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic121"><img width="196" src="https://i.ytimg.com/vi/Yl7D5LeU_Qg/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=tW-_7PVq_HdDkAVjYu93qK778H8" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic122span"></span>
+                        <span class="classForHidden" id="pic122spanHidden">아이돌주간 댄스</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic122"><img width="196" src="https://i.ytimg.com/vi/LzujUrSZihc/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=G9vtERVjzZpqUWCJ1NG2UUrvFb8" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic123span"></span>
+                        <span class="classForHidden" id="pic123spanHidden">유희열의 스케치북</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic123"><img width="196" src="https://i.ytimg.com/vi/YoX74D4kb4I/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=4dDKv6fnqoDlclOiTfUwqRTzB88" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic124span"></span>
+                        <span class="classForHidden" id="pic124spanHidden">ArianaGrande 1</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic124"><img width="196" src="https://i.ytimg.com/vi/KElpD35zmdk/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=E70lLvHEGZ7HUa5SRDkqni9zNFs" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic125span"></span>
+                        <span class="classForHidden" id="pic125spanHidden">펜타토닉스</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic125"><img width="196" src="https://i.ytimg.com/vi/LCj6aAif3oM/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=K2zs8tHuPPD_ODZ_6OyT_Yhc520" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <div class="numbertext">3 / 3</div>
+                <div class="mySlides1 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic131span"></span>
+                        <span class="classForHidden" id="pic131spanHidden">수지,백현 - Dream</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic131"><img width="196" src="https://i.ytimg.com/vi/v_YQ0kIPCpY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=4qNWhmlJVVCSAbXkNdIgApjk4U8" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic132span"></span>
+                        <span class="classForHidden" id="pic132spanHidden">SM Town</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic132"><img width="196" src="https://i.ytimg.com/vi/I3dezFzsNss/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=YVt4UObEWV0CmKaYHzocu8mvntg" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic133span"></span>
+                        <span class="classForHidden" id="pic133spanHidden">에프엑스</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic133"><img width="196" src="https://i.ytimg.com/vi/nR6iLq4VgSY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=mH1HQ8yTfHlBfKIBA1WXe_oH1dY" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic134span"></span>
+                        <span class="classForHidden" id="pic134spanHidden">에릭남, 웬디 - 봄인가봐</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic134"><img width="196" src="https://i.ytimg.com/vi/erErBFKPbMY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=w4eMYoFFAxs_xgs6aH1ehtE2iMM" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic135span"></span>
+                        <span class="classForHidden" id="pic135spanHidden">펜타토닉스</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic135"><img width="196" src="https://i.ytimg.com/vi/oHmBf4ExtZk/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Kn0GSot-TEYS9iWkHF675CmOm6M" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <a class="next" onclick="plusSlides1(1)">
+                    <img src="image/right.png" width="100" height="100" alt="next" onmouseover="hoverRightImg(this)" onmouseout="normalRightImg(this)">
+                </a>
+            </div>
+        </div>
+
+        <div class="item_container">
+            <h3>좋아요 누른 동영상</h3>
+            <div class="dotClass">
+                <span class="dot2" onclick="currentSlide2(1)"></span>
+                <span class="dot2" onclick="currentSlide2(2)"></span>
+                <span class="dot2" onclick="currentSlide2(3)"></span>
+            </div>
+
+            <div class="content_lists">
+                <a class="prev" onclick="plusSlides2(-1)">
+                    <img src="image/left.png" width="100" height="100" alt="prev" onmouseover="hoverLeftImg(this)" onmouseout="normalLeftImg(this)">
+                </a>
+                <div class="numbertext">1 / 3</div>
+                <div class="mySlides2 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic211span"></span>
+                        <span class="classForHidden" id="pic211spanHidden">Ariana Grande - Bnag bang</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic211"><img width="196" src="https://i.ytimg.com/vi/WAysag2VohM/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=gHtSvX5u8-Lvkjwn3TW_zSrr3Bc" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic212span"></span>
+                        <span class="classForHidden" id="pic212spanHidden">Ariana Grande - Side to Side</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic212"><img width="196" src="https://i.ytimg.com/vi/lf_wVfwpfp8/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=dtNDjkqCy-XSNwV5g4Jbb3IW3JY" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic213span"></span>
+                        <span class="classForHidden" id="pic213spanHidden">Ariana Grande - Last Christmas</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic213"><img width="196" src="https://i.ytimg.com/vi/LHNBKpR6jxE/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_oQL1QjNowZSMOZgT0XHsy5u0Oc" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic214span"></span>
+                        <span class="classForHidden" id="pic214spanHidden">Ariana Grande 4</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic214"><img width="196" src="https://i.ytimg.com/vi/Wg92RrNhB8s/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=4ijDam9FgIN4Qsk4yqsjfMU7st4" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic215span"></span>
+                        <span class="classForHidden" id="pic215spanHidden">Ariana Grande - Greedy</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic215"><img width="196" src="https://i.ytimg.com/vi/eBAHqRnSgRw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=LlPtHJYUbp4YDLSouTx7AEcgUDM" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <div class="numbertext">2 / 3</div>
+                <div class="mySlides2 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic221span"></span>
+                        <span class="classForHidden" id="pic221spanHidden">제이래빗 - 아저씨</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic221"><img width="196" src="https://i.ytimg.com/vi/Z3zkiKnYNWk/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=zSwOkTnY75MlGbe8ftloHqbmWcU" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic222span"></span>
+                        <span class="classForHidden" id="pic222spanHidden">악동뮤지션 - 오랜날, 오랜밤</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic222"><img width="196" src="https://i.ytimg.com/vi/wEQpfil0IYA/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=_jZl2pby94WJYQvbjm-PkuS3tnY" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic223span"></span>
+                        <span class="classForHidden" id="pic223spanHidden">볼빨간 사춘기 - 좋다고말해</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic223"><img width="196" src="https://i.ytimg.com/vi/y5MAgMVwfFs/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=erQi-0s1HnPRdVEth8kQGAScL5M" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic224span"></span>
+                        <span class="classForHidden" id="pic224spanHidden">빅뱅 - 에라모르겠다</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic224"><img width="196" src="https://i.ytimg.com/vi/iIPH8LFYFRk/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=2C78aY0bq0gjdiFhSe79XQ0Tl_0" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic225span"></span>
+                        <span class="classForHidden" id="pic225spanHidden">볼빨간 사춘기 - 우주를 줄게</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic225"><img width="196" src="https://i.ytimg.com/vi/9U8uA702xrE/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=isuj8jooJx1S7bofQaDsbU1-Z7k" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <div class="numbertext">3 / 3</div>
+                <div class="mySlides2 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic231span"></span>
+                        <span class="classForHidden" id="pic231spanHidden">악동뮤지션 - 200%</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic231"><img width="196" src="https://i.ytimg.com/vi/sJLhrbnzAhI/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=w2TkMlbU0F5-3Y-RMzVnIstIc9Y" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic232span"></span>
+                        <span class="classForHidden" id="pic232spanHidden">new album</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic232"><img width="196" src="https://i.ytimg.com/vi/HMrwyaQ_Y-c/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Rh8644BfYUvNRvaPgG_2_YHOyos" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic233span"></span>
+                        <span class="classForHidden" id="pic233spanHidden">블락비 - Yesterday</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic233"><img width="196" src="https://i.ytimg.com/vi/3q22SInyiX8/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=4mc584aKfP2lyfPAh6KF8Vbw2iE" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic234span"></span>
+                        <span class="classForHidden" id="pic234spanHidden">싸우자 귀신아</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic234"><img width="196" src="https://i.ytimg.com/vi/sJB4er2pobw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=ELSfYhT_FDsmZDKNRJd8GOO5o6A" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic235span"></span>
+                        <span class="classForHidden" id="pic235spanHidden">버뮤다 삼각지대</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic235"><img width="196" src="https://i.ytimg.com/vi/ZHoLaLlL5lA/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=gRzfTwEQsH9hzYmIFfBCOT8ALl4" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <a class="next" onclick="plusSlides2(1)">
+                    <img src="image/right.png" width="100" height="100" alt="next" onmouseover="hoverRightImg(this)" onmouseout="normalRightImg(this)">
+                </a>
+            </div>
+        </div>
+
+        <div class="item_container">
+            <h3>재생 목록 </h3>
+            <div class="dotClass">
+                <span class="dot3" onclick="currentSlide3(1)"></span>
+                <span class="dot3" onclick="currentSlide3(2)"></span>
+                <span class="dot3" onclick="currentSlide3(3)"></span>
+            </div>
+
+            <div class="content_lists">
+                <a class="prev" onclick="plusSlides3(-1)" >
+                    <img src="image/left.png" width="100" height="100" alt="prev" onmouseover="hoverLeftImg(this)" onmouseout="normalLeftImg(this)">
+                </a>
+
+                <div class="numbertext">1 / 3</div>
+                <div class="mySlides3 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic311span"></span>
+                        <span class="classForHidden" id="pic311spanHidden">울랄라세션 - 기분좋은날</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic311"><img width="196" src="https://i.ytimg.com/vi/upbAbcTCDwA/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=8TGD8Ei16K8NuVZfVTy1naKp-ws" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic312span"></span>
+                        <span class="classForHidden" id="pic312spanHidden">아이오아이 - 200%</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic312"><img width="196" src="https://i.ytimg.com/vi/PZxPUM4bUzY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=Xe_lo0k8CES72stStuFIM9mi-t0" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic313span"></span>
+                        <span class="classForHidden" id="pic313spanHidden">마마무 - 음오아예</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic313"><img width="196" src="https://i.ytimg.com/vi/t6hdAJDUxYI/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=yT1MFsWMdi3cmA-GBvnE5gDL8bo" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic314span"></span>
+                        <span class="classForHidden" id="pic314spanHidden">아이오아이 - pick me</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic314"><img width="196" src="https://i.ytimg.com/vi/BiorIyrjTHc/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=-JEpvHsls1nlCm5Z5cjJICZTB1g" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic315span"></span>
+                        <span class="classForHidden" id="pic315spanHidden">트와이스 - knock knock</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic315"><img width="196" src="https://i.ytimg.com/vi/kWrjQlIZYEg/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=mM8I8kQco3JZ-p_545uQnu5k7jc" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <div class="numbertext">2 / 3</div>
+                <div class="mySlides3 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic321span"></span>
+                        <span class="classForHidden" id="pic321spanHidden">daft punk - frequent</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic321"><img width="196" src="https://i.ytimg.com/vi/_ScM9pKlCfo/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=sR2xf6BhXV8hgfJjY0-HZVxfr6s" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic322span"></span>
+                        <span class="classForHidden" id="pic322spanHidden">daft punk - closer</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic322"><img width="196" src="https://i.ytimg.com/vi/a5uQMwRMHcs/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=3xwyoM20xx8OE8yp_v1GJIHhpVE" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic323span"></span>
+                        <span class="classForHidden" id="pic323spanHidden">트와이스 - cheer up</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic323"><img width="196" src="https://i.ytimg.com/vi/BbQG-S4mU0U/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=8rwxz0qmaLAd_uPOJ7B8WQwQ7tY" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic324span"></span>
+                        <span class="classForHidden" id="pic324spanHidden">원더걸스 - i feel you</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic324"><img width="196" src="https://i.ytimg.com/vi/V9QXQz6uE0M/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=4sfZN3zEZ7A7G-efddS6l7tkACo" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic325span"></span>
+                        <span class="classForHidden" id="pic325spanHidden">미쓰에이 - 다른남자말고 너</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic325"><img width="196" src="https://i.ytimg.com/vi/zO9RzrhYR-I/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=lwpccsEpRoRpZg2c_mv41QcWjv8" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <div class="numbertext">3 / 3</div>
+                <div class="mySlides3 fade">
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic331span"></span>
+                        <span class="classForHidden" id="pic331spanHidden">Bruno Mars - uptown funk</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic331"><img width="196" src="https://i.ytimg.com/vi/UqyT8IEBkvY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=J8_wv4UFzuKmxtKnqRk6i9WSWO4" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic332span"></span>
+                        <span class="classForHidden" id="pic332spanHidden">Bruno Mars - wait</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic332"><img width="196" src="https://i.ytimg.com/vi/nPvuNsRccVw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=t61UF1I1rWeeayQn-884fzZo_zU" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic333span"></span>
+                        <span class="classForHidden" id="pic333spanHidden">Bruno Mars - a</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic333"><img width="196" src="https://i.ytimg.com/vi/d2UZlwTDGbY/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=aPvgc5V-FLWChNT4JBRmEPGsBOY" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic334span"></span>
+                        <span class="classForHidden" id="pic334spanHidden">Bruno Mars - minute</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic334"><img width="196" src="https://i.ytimg.com/vi/ttlTus58MNA/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=KJTBzsEUbqjJ353Mf9nfPGZ2Dvk" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                    <div class="divForInline">
+                        <span class="classForInfo" id="pic335span"></span>
+                        <span class="classForHidden" id="pic335spanHidden">Bruno Mars - if i were</span>
+                        <a href="" onmouseover="onPic(this.id)" onmouseout="outPic(this.id)" id="pic335"><img width="196" src="https://i.ytimg.com/vi/mPIm_ZZ0yVw/hqdefault.jpg?custom=true&w=336&h=188&stc=true&jpg444=true&jpgq=90&sp=68&sigh=lvyq3gR04KY5biiw5HvsgiSgd9Q" alt="" data-ytimg="1" height="110" ></a>
+                    </div>
+                </div>
+
+                <a class="next" onclick="plusSlides3(1)">
+                    <img src="image/right.png" width="100" height="100" alt="next" onmouseover="hoverRightImg(this)" onmouseout="normalRightImg(this)">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <span class="info">본 콘텐츠의 저작권은 저작권자에 있으며, 이를 무단으로 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</span>
+            <address>
+                <em>Copyright ©</em>
+                <a href="" target="_blank" >myTube Corp.</a>
+                <span>All Rights Reserved.</span>
+            </address>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="js/home.js"></script>
+</body>
+</html>

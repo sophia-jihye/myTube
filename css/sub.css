@@ -1,0 +1,310 @@
+/*구글 웹폰트 시작*/
+@import url('http://fonts.googleapis.com/css?family=Roboto+Condensed');
+/*구글 웹폰트 끝*/
+
+/*전체 레이아웃 시작*/
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    font-family: Roboto Condensed, sans-serif;
+    font-size: 18px;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+}
+div.header{
+    background-color: white;
+    border: #e9d1ff 1px solid;
+    position:fixed;
+    z-index:999;
+    height:80px;
+    width:100%;
+    top:0;
+    left:0;
+    padding: 10px;
+}
+.header h1 {
+    display: inline;
+    float: left;
+}
+div.nav {
+    float: left;
+    max-width: 180px;
+    margin: 0;
+    padding: 1em;
+    background-color: white;
+    border: #e9d1ff 1px solid;
+    position:fixed;
+    z-index:999;
+    height:800px;
+    width:180px;
+    top:101px;
+    left:0;
+}
+div.container{
+    background-color: #F1F1F1;
+    position: relative;
+    top:80px;
+    padding-top: 1em;
+    left: 200px;
+    width:1319px;
+
+    text-align: center;
+}
+
+div.footer {
+    background-color: whitesmoke;
+    color: dimgray;
+    clear: left;
+    text-align: center;
+    padding: 1em;
+}
+h2{
+    font-size: 15px;
+}
+/*전체 레이아웃 끝*/
+
+/*myTube 로고 위치 조정 시작*/
+.head_logo a img{
+    position: relative;
+    top: -17px;
+    left: -5px;
+}
+/*myTube 로고 위치 조정 끝*/
+
+/*a링크 마우스오버 시작*/
+.nav a.menu_cnt{
+    color: darkslategray;
+}
+.nav a.menu_cnt:hover{
+    color: lightgray;
+}
+.header a.menu_cnt:hover{
+    color: lightgray;
+}
+.button_base a:hover{
+    color: white;
+}
+/*a링크 마우스오버 끝*/
+
+/*검색 시작*/
+.searchInput{
+    width: 100%;
+}
+.search{
+    width: 74%;
+    float: left;
+}
+/*검색 끝*/
+
+/*header 영역 버튼 시작*/
+.back {
+    float: left;
+    padding: 0 5px 5px 5px;
+}
+.button_base {
+    margin: 0;
+    border: 0;
+    font-size: 18px;
+    position: relative;
+    width: 100px;
+    height: 66px;
+}
+.button_base:hover {
+    cursor: pointer;
+}
+.b03_skewed_slide_in {
+    overflow: hidden;
+    border: darkgray groove 2px;
+}
+.b03_skewed_slide_in div {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 10px;
+}
+.b03_skewed_slide_in div:nth-child(1) {
+    color: #000000;
+    background-color: #ffffff;
+}
+.b03_skewed_slide_in div:nth-child(2) {
+    background-color: mediumpurple;
+    width: 230px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transform: translate(-250px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-250px, 0px) skewX(-30deg);
+    -moz-transform: translate(-250px, 0px) skewX(-30deg);
+}
+.b03_skewed_slide_in div:nth-child(3) {
+    color: #ffffff;
+    left: -200px;
+    transition: left 0.2s ease;
+    -webkit-transition: left 0.2s ease;
+    -moz-transition: left 0.2s ease;
+}
+.b03_skewed_slide_in:hover div:nth-child(2) {
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    transform: translate(-15px, 0px) skewX(-30deg);
+    -webkit-transform: translate(-15px, 0px) skewX(-30deg);
+    -moz-transform: translate(-15px, 0px) skewX(-30deg);
+}
+.b03_skewed_slide_in:hover div:nth-child(3) {
+    left: 0;
+    transition: left 0.30000000000000004s ease;
+    -webkit-transition: left 0.30000000000000004s ease;
+    -moz-transition: left 0.30000000000000004s ease;
+}
+/*header 영역 버튼 끝*/
+
+/*로그인 modal 시작*/
+.modalContent {
+    display: none;
+}
+.modalOverlay {
+    overflow-x: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*width: 100vw;*/
+    /*height: 100vh;*/
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: background 0.05s linear;
+    transition: background 0.05s linear;
+}
+.modalOverlay.active {
+    background: rgba(0, 0, 0, 0.7);
+}
+.modalContainer {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 50px auto 100px;
+    background: #fff;
+    padding: 50px 30px 50px;
+    position: relative;
+    -webkit-box-shadow: 0 0 10px #000;
+    box-shadow: 0 0 10px #000;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    /*transition: transform 0.3s ease-out;*/
+    transition: transform 0.3s ease-out,
+    -webkit-transform 0.3s ease-out;
+}
+.modalContainer.modalMedium {
+    width: 700px;
+    max-width: -webkit-calc(100% - 10px);
+    max-width: calc(100% - 10px);
+}
+.modalContainer.drop {
+    -webkit-transform: translateY(-300px);
+    -ms-transform: translateY(-300px);
+    transform: translateY(-300px);
+}
+.modalContainer.drop.opened {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+.modalContainer.zoom {
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+}
+/*로그인 modal 끝*/
+
+/*로그인 버튼 시작*/
+.login_form input{
+    width: 300px;
+}
+.button {
+    border: none;
+    color: lightgray;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 50%;
+}
+.button4 {
+    background-color: #e9d1ff;
+    color: slategray;
+    border: 2px solid #e7e7e7;
+}
+.button1 {
+    border: none;
+    color: lightgray;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 15%;
+    position: relative;
+    top: -12px;
+
+    background-color: #e9d1ff;
+    color: slategray;
+    border: 2px solid #e7e7e7;
+}
+.button1:hover {
+    color: white;
+    background-color: mediumpurple;
+}
+/*로그인 버튼 끝*/
+
+/*댓글 영역 시작*/
+.replyDiv{
+    border: darkgray 1px solid;
+    width: 80%;
+    margin: auto;
+    padding: 1em;
+}
+.writeReplyDiv{
+    text-align: right;
+}
+.writeReplyDiv textarea{
+    width: 71.5%;
+}
+.eachReplyDiv{
+    text-align: left;
+}
+.idSpan{
+    width: 20%;
+    position: relative;
+    left: 1.5%;
+    text-align: left;
+}
+#replySpan01{
+    width: 85%;
+    position: relative;
+    left: 7.5%;
+    text-align: left;
+}
+#replySpan02{
+    width: 85%;
+    position: relative;
+    left: 6.5%;
+    text-align: left;
+}
+#replySpan03{
+    width: 85%;
+    position: relative;
+    left: 6%;
+    text-align: left;
+}
+/*댓글 영역 끝*/
